@@ -7,15 +7,15 @@ function columnChart() {
       yValue = function(d) { return d[1]; },
       xScale = d3.scale.ordinal(),
       yScale = d3.scale.linear(),
-      yAxis = d3.svg.axis().scale(yScale).orient("left"),
-      xAxis = d3.svg.axis().scale(xScale);//.tickValues(1920,2000);
+      yAxis = d3.svg.axis().scale(yScale).tickValues([-3,-2,-1,0,1,2]).orient("left"),
+      xAxis = d3.svg.axis().scale(xScale).tickValues([1925, 1935, 1945, 1955, 1965, 1975, 1985, 1995, 2005]);
 
   function chart(selection) {
     selection.each(function(data) {
-
       // Convert data to standard representation greedily;
       // this is needed for nondeterministic accessors.
       data = data.map(function(d, i) {
+        console.log(d)
         return [xValue.call(data, d, i), yValue.call(data, d, i)];
       });
     
@@ -55,21 +55,23 @@ function columnChart() {
       bar.enter().append("rect");
       bar.exit().remove();
       bar .attr("class", function(d, i) {
-        if (d[1] < -2) {
-          return 'bar verynegative';
-        } else if (d[1] > 2) {
-          return 'bar verypositive';
-        } else if (d[1] < 0 & d[1] > -2) {
+        if (d[1] < 0 & d[1] > -2) {
           return 'bar negative'
         } else if (d[1] > 0 & d[1] < 2) {
           return 'bar positive'
+        } else if (d[1] < -2) {
+          return 'bar verynegative';
+        } else if (d[1] > 2) {
+          return 'bar verypositive';
         };
 
       })
           .attr("x", function(d) { return X(d); })
           .attr("y", function(d, i) { return d[1] < 0 ? Y0() : Y(d); })
-          .attr("width", xScale.rangeBand())
-          .attr("height", function(d, i) { return Math.abs( Y(d) - Y0() ); });
+          .attr("width", xScale.rangeBand()/1.5)
+          .attr("height", function(d, i) { return Math.abs( Y(d) - Y0() ); })
+          .on({
+            "mouseover":  function() {console.log(d3.select(this))}});
 
     // x axis at the bottom of the chart
      g.select(".x.axis")
@@ -79,7 +81,7 @@ function columnChart() {
     // zero line
      g.select(".x.axis.zero")
         .attr("transform", "translate(0," + Y0() + ")")
-        .call(xAxis.tickFormat("").tickSize(0));
+        .call(xAxis.tickSize(0));
     
     
       // Update the y-axis.

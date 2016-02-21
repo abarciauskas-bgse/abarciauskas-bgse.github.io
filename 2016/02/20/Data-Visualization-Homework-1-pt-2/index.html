@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="author" content="John Doe"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Data Visualization Homework 1, pt 2</title><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="/css/carbon.css"><script defer="defer" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script><script src="//d3js.org/d3.v3.min.js"></script><script type="text/javascript" src="/javascripts/columnChart.js"></script><script defer="defer" src="//cdn.jsdelivr.net/jquery.pjax/1.9.5/jquery.pjax.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen"><script defer="defer" type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>var performFancybox = true;</script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/katex/0.5.0/katex.min.css"><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/katex.min.js"></script><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/contrib/auto-render.min.js"></script><script>var doRenderMath = 'katex';</script><script defer="defer" src="/js/carbon.js"></script></head><body><div id="container"><div id="banner"><h1 id="site-title"><a href="/">Hexo</a></h1><p id="site-subtitle"></p></div><div id="content"><div class="meta"><h2 class="article-title"><a href="/2016/02/20/Data-Visualization-Homework-1-pt-2">Data Visualization Homework 1, pt 2</a></h2><div class="article-date"><a href="javascript:void(0);" class="extra-switch">2016-02-20</a></div></div><div class="extra"><span class="Tags">Tags: 無.</span></div><div class="extra"><span class="Categorias">Categorias: 無.</span></div><div class="article-content"><div class="gallery"></div><style>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="author" content="Aimee Barciauskas"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Data Visualization Homework 1, pt 2</title><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="/css/carbon.css"><script defer="defer" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script><script src="//d3js.org/d3.v3.min.js"></script><script type="text/javascript" src="/javascripts/columnChart.js"></script><script defer="defer" src="//cdn.jsdelivr.net/jquery.pjax/1.9.5/jquery.pjax.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen"><script defer="defer" type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>var performFancybox = true;</script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/katex/0.5.0/katex.min.css"><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/katex.min.js"></script><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/contrib/auto-render.min.js"></script><script>var doRenderMath = 'katex';</script><script defer="defer" src="/js/carbon.js"></script></head><body><div id="container"><div id="banner"><h1 id="site-title"><a href="/">Aimee Barciauskas</a></h1><p id="site-subtitle"></p></div><div id="content"><div class="meta"><h2 class="article-title"><a href="/2016/02/20/Data-Visualization-Homework-1-pt-2">Data Visualization Homework 1, pt 2</a></h2><div class="article-date"><a href="javascript:void(0);" class="extra-switch">2016-02-20</a></div></div><div class="extra"><span class="Tags">Tags: 無.</span></div><div class="extra"><span class="Categorias">Categorias: 無.</span></div><div class="article-content"><div class="gallery"></div><style>
 
 
 .chart rect {
@@ -17,6 +17,7 @@
 
 .bar.negative {
   fill: #3399FF;
+
 }
 
 .bar.verynegative {
@@ -32,25 +33,27 @@
   shape-rendering: crispEdges;
 }
 
+.x.axis path {
+  stroke: none;
+}
+
 </style>
 
-<div id="month1"><br></div><br><div id="month2"><br></div><br><div id="month3"><br></div><br><div id="month4"><br></div><br><div id="month5"><br></div><br><div id="month6"><br></div><br><div id="month7"><br></div><br><div id="month8"><br></div><br><div id="month9"><br></div><br><div id="month10"><br></div><br><div id="month11"><br></div><br><div id="month12"><br></div>
+<div id="month1"><br><h3>January</h3><br></div><br><div id="month2"><br><h3>February</h3><br></div><br><div id="month3"><br><h3>March</h3><br></div><br><div id="month4"><br><h3>April</h3><br></div><br><div id="month5"><br><h3>May</h3><br></div><br><div id="month6"><br><h3>June</h3><br></div><br><div id="month7"><br><h3>July</h3><br></div><br><div id="month8"><br><h3>August</h3><br></div><br><div id="month9"><br><h3>September</h3><br></div><br><div id="month10"><br><h3>October</h3><br></div><br><div id="month11"><br><h3>November</h3><br></div><br><div id="month12"><br><h3>December</h3><br></div>
 
 <script>
 
-d3.csv("/data/bear-island.csv", function(error, data) {
+d3.csv("/data/bear-island-v3.csv", function(error, data) {
   if (error) throw error;
 
   data.forEach(function(d) {
     d.year = +d.year;
-    d.TAM = +d.TAM;
     d.month = +d.month;
     d.scaled = +d.scaled;
   });
 
   d3.range(1,13).forEach(function(monthint) {
-    monthdata = data.filter(function(d) { return d.month == monthint })
-
+    var monthdata = data.filter(function(d) { return d.month == monthint })
     d3.select('#month' + monthint.toString())
     .datum(monthdata)
       .call(columnChart()

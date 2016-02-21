@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="author" content="John Doe"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Data Visualization Homework 1, pt 1</title><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="/css/carbon.css"><script defer="defer" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script><script src="//d3js.org/d3.v3.min.js"></script><script type="text/javascript" src="/javascripts/columnChart.js"></script><script defer="defer" src="//cdn.jsdelivr.net/jquery.pjax/1.9.5/jquery.pjax.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen"><script defer="defer" type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>var performFancybox = true;</script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/katex/0.5.0/katex.min.css"><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/katex.min.js"></script><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/contrib/auto-render.min.js"></script><script>var doRenderMath = 'katex';</script><script defer="defer" src="/js/carbon.js"></script></head><body><div id="container"><div id="banner"><h1 id="site-title"><a href="/">Hexo</a></h1><p id="site-subtitle"></p></div><div id="content"><div class="meta"><h2 class="article-title"><a href="/2016/02/20/Data-Visualization-Homework-1">Data Visualization Homework 1, pt 1</a></h2><div class="article-date"><a href="javascript:void(0);" class="extra-switch">2016-02-20</a></div></div><div class="extra"><span class="Tags">Tags: 無.</span></div><div class="extra"><span class="Categorias">Categorias: 無.</span></div><div class="article-content"><div class="gallery"></div><style>
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="author" content="Aimee Barciauskas"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Data Visualization Homework 1, pt 1</title><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/normalize/3.0.3/normalize.min.css"><link rel="stylesheet" type="text/css" href="/css/carbon.css"><script defer="defer" src="//cdn.jsdelivr.net/jquery/2.1.4/jquery.min.js"></script><script src="//d3js.org/d3.v3.min.js"></script><script type="text/javascript" src="/javascripts/columnChart.js"></script><script defer="defer" src="//cdn.jsdelivr.net/jquery.pjax/1.9.5/jquery.pjax.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" type="text/css" media="screen"><script defer="defer" type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script><script>var performFancybox = true;</script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/katex/0.5.0/katex.min.css"><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/katex.min.js"></script><script async="async" type="text/javascript" src="//cdn.jsdelivr.net/katex/0.5.0/contrib/auto-render.min.js"></script><script>var doRenderMath = 'katex';</script><script defer="defer" src="/js/carbon.js"></script></head><body><div id="container"><div id="banner"><h1 id="site-title"><a href="/">Aimee Barciauskas</a></h1><p id="site-subtitle"></p></div><div id="content"><div class="meta"><h2 class="article-title"><a href="/2016/02/20/Data-Visualization-Homework-1">Data Visualization Homework 1, pt 1</a></h2><div class="article-date"><a href="javascript:void(0);" class="extra-switch">2016-02-20</a></div></div><div class="extra"><span class="Tags">Tags: 無.</span></div><div class="extra"><span class="Categorias">Categorias: 無.</span></div><div class="article-content"><div class="gallery"></div><style>
 
 body {
   font: 10px sans-serif;
@@ -14,13 +14,17 @@ body {
 .dot {
 }
 
+.dotfocus, .legend-focus {
+  opacity: 1;
+}
+
 </style>
 
 <script>
 console.log('his')
 
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
-    width = 800 - margin.left - margin.right,
+    width = 700 - margin.left - margin.right,
     height = 300 - margin.top - margin.bottom;
 
 var x = d3.scale.linear()
@@ -82,10 +86,12 @@ d3.csv("/data/isotopes.csv", function(error, data) {
       .data(data)
     .enter().append("circle")
       .attr("class", "dot")
+      .attr('class', function(d) { return 'dot dot-' + d.species.split('.')[1]})
       .attr("r", 3.5)
       .attr("cx", function(d) { return x(d.nitrogen); })
       .attr("cy", function(d) { return y(d.carbon); })
-      .style("fill", function(d) { return color(d.species); });
+      .style("fill", function(d) { return color(d.species); })
+      .attr('opacity',0.2);
 
   var legend = svg.selectAll(".legend")
       .data(color.domain())
@@ -95,9 +101,20 @@ d3.csv("/data/isotopes.csv", function(error, data) {
 
   legend.append("rect")
       .attr("x", width - 18)
-      .attr("width", 18)
+      .attr("width", 25)
       .attr("height", 18)
-      .style("fill", color);
+      .style("fill", color)
+      .attr('opacity', 0.2)
+      .attr('id', function(d) { return d.split('.')[1] })
+      .on({
+        "click":  function() {
+          var thesedots = d3.selectAll('circle.dot-' + d3.select(this).attr('id'))
+          .classed("dotfocus", function (d, i) {
+            return !d3.select(this).classed("dotfocus");
+          });
+
+          d3.select(this).classed("legend-focus", !d3.select(this).classed("legend-focus"));
+      }});
 
   legend.append("text")
       .attr("x", width - 24)
