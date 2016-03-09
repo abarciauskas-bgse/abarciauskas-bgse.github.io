@@ -99,7 +99,7 @@ var PCA = function(){
         // Compute the thin SVD from G. H. Golub and C. Reinsch, Numer. Math. 14, 403-420 (1970)
         var prec = Math.pow(2,-52) // assumes double prec
         var tolerance = 1.e-64/prec;
-        var itmax = 50;
+        var itmax = 100;
         var c = 0;
         var i = 0;
         var j = 0;
