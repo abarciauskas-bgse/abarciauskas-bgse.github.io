@@ -15,7 +15,6 @@ function columnChart() {
       // Convert data to standard representation greedily;
       // this is needed for nondeterministic accessors.
       data = data.map(function(d, i) {
-        console.log(d)
         return [xValue.call(data, d, i), yValue.call(data, d, i)];
       });
     
@@ -70,8 +69,6 @@ function columnChart() {
           .attr("y", function(d, i) { return d[1] < 0 ? Y0() : Y(d); })
           .attr("width", xScale.rangeBand()/1.5)
           .attr("height", function(d, i) { return Math.abs( Y(d) - Y0() ); })
-          .on({
-            "mouseover":  function() {console.log(d3.select(this))}});
 
     // x axis at the bottom of the chart
      g.select(".x.axis")
