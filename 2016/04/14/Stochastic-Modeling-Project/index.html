@@ -1,18 +1,8 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><script type="text/javascript" src="http://d3js.org/d3.v3.js" charset="utf-8"></script><script type="text/javascript" src="/javascripts/d3.tip.js"></script><script type="text/javascript" src="/javascripts/columnChart.js"></script><script type="text/javascript" src="http://numericjs.com/numeric/lib/numeric-1.2.6.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jstat/1.5.2/jstat.min.js"></script><script type="text/javascript" src="https://protobi.com/examples/pca/pca.js"></script><title> Stochastic Modeling Project · Aimee Barciauskas</title><meta name="description" content="Stochastic Modeling Project - Aimee Barciauskas"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"></head><body><header><a href="/" class="logo-link"><img></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/abarciauskas-bgse" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Stochastic Modeling Project</h1><div class="post-time">Apr 14, 2016</div><div class="post-content"><script type="text/javascript" src="/js/colorbrewer.js"></script>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><script type="text/javascript" src="http://d3js.org/d3.v3.js" charset="utf-8"></script><script type="text/javascript" src="/javascripts/d3.tip.js"></script><script type="text/javascript" src="/javascripts/columnChart.js"></script><script type="text/javascript" src="http://numericjs.com/numeric/lib/numeric-1.2.6.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/jstat/1.5.2/jstat.min.js"></script><script type="text/javascript" src="https://protobi.com/examples/pca/pca.js"></script><title> Stochastic Modeling Project: Applications of the Viterbi Algoritm · Aimee Barciauskas</title><meta name="description" content="Stochastic Modeling Project: Applications of the Viterbi Algoritm - Aimee Barciauskas"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/css/apollo.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600"></head><body><header><a href="/" class="logo-link"><img></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="https://github.com/abarciauskas-bgse" target="_blank" class="nav-list-link">GITHUB</a></li></ul></header><section class="container"><div class="post"><article class="post-block"><h1 class="post-title">Stochastic Modeling Project: Applications of the Viterbi Algoritm</h1><div class="post-time">Apr 14, 2016</div><div class="post-content"><script type="text/javascript" src="/js/colorbrewer.js"></script>
 <script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
 
 <style type="text/css">
 
-  body {
-    background: #222;
-    color: white;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-    font-size: 18px;
-  }
-
-  a {
-    color: orange;
-  }
   .node circle {
     cursor: pointer;
     /*fill: #fff;*/
@@ -41,7 +31,7 @@
 
 </style>
 
-<div id="body" class="content"><br><h1>Applications of the Viterbi Algorithm</h1><p>The Viterbi Algorithm is being used to solve Hidden Markov Models and Partially-Observable Markov Decision Processes in the real world.</p><p>The Viterbi Algorithm is a dynamic programming algorithm which solves for the most likely path of a sequential process given a series of observations. It is similar to a shortest path algorithm in that it finds the “least” cost path in it the back-solve phase. The most likely location at time = k can be used to find the most likely path up to time k. So at time N the whole problem can be solved because each subproblem is already optimal.</p><p>Below are examples of how the Viterbi may be used for autonomous robot navigation and speech recognition.</p><p>All the code can be found <a href="https://github.com/abarciauskas-bgse/stochastic/tree/master/project" target="_blank" rel="external">on github.</a></p><p>Anther real-world but less-intuitive application of the Viterbi Algorithm not covered here is in <a href="https://en.wikipedia.org/wiki/Convolutional_code" target="_blank" rel="external">convolutional coding</a>, which is being used in <a href="https://en.wikipedia.org/wiki/Voyager_program" target="_blank" rel="external">spacecraft telemetry.</a></p></div>
+<div id="body" class="content"><br><p>The Viterbi Algorithm is being used to solve Hidden Markov Models and Partially-Observable Markov Decision Processes in the real world.</p><p>The Viterbi Algorithm is a dynamic programming algorithm which solves for the most likely path of a sequential process given a series of observations. It is similar to a shortest path algorithm in that it finds the “least” cost path in it the back-solve phase. The most likely location at time = k can be used to find the most likely path up to time k. So at time N the whole problem can be solved because each subproblem is already optimal.</p><p>Below are examples of how the Viterbi may be used for autonomous robot navigation and speech recognition.</p><p>All the code can be found <a href="https://github.com/abarciauskas-bgse/stochastic/tree/master/project" target="_blank" rel="external">on github.</a></p><p>Anther real-world but less-intuitive application of the Viterbi Algorithm not covered here is in <a href="https://en.wikipedia.org/wiki/Convolutional_code" target="_blank" rel="external">convolutional coding</a>, which is being used in <a href="https://en.wikipedia.org/wiki/Voyager_program" target="_blank" rel="external">spacecraft telemetry.</a></p></div>
 
 <div class="content"><br>  <h1>Resources</h1><ul><li><a href="http://idm-lab.org/bib/abstracts/papers/book98.pdf" target="_blank" rel="external">Xavier: A Robot Navigation Architecture Based on Partially Observable Markov Decision Process Models</a></li><li><a href="http://www.scribd.com/doc/56150380/Dynamic-Programming-and-Optimal-Control-Vol-I#scribd" target="_blank" rel="external"><em>Dynamic Programming and Optimal Control Volume I (Section 2.2),</em>, Dimitri P. Bertseka</a></li><li><a href="https://en.wikipedia.org/wiki/Viterbi_algorithm" target="_blank" rel="external">The Viterbi Algorithm</a></li><li><a href="http://www.deepsky.com/~merovech/voynich/voynich_manchu_reference_materials/PDFs/jurafsky_martin.pdf" target="_blank" rel="external"><em>Speech and Language Processing (Section 5.9),</em> Daniel Jurafsky and James H. Martin</a></li><li><a href="https://www.udacity.com/course/viewer#!/c-cs373/l-48646841/m-48667984" target="_blank" rel="external">Udacity: Artificial Intelligence for Robotics</a></li><br>  </ul><br></div>
 
@@ -101,7 +91,7 @@
     vis.append("svg:text")
         .text('Autonomous Robot Navigation')
         .style('font-size', '36px')
-        .style('fill', 'white')
+        .style('fill', '#34495e')
         .style("fill-opacity", 1);
 
     d3.json('/js/transitions_matrix.json', function(transitions) {
@@ -112,7 +102,7 @@
             .attr('x', cell_ht*4+20)
             .attr('y', topmargin+16)
             .style('font-size', '16px')
-            .style('fill', 'white');
+            .style('fill', '#34495e');
 
         var map = vis.selectAll('rect.cell').data(map)
 
@@ -136,7 +126,7 @@
             .attr('x', cell_ht*4+20)
             .attr('y', topmargin+16)
             .style('font-size', '16px')
-            .style('fill', 'white');
+            .style('fill', '#34495e');
 
         topmargin = 4*cell_ht + topmargin + 40
 
@@ -204,7 +194,7 @@
                       .attr('x', cell_ht*4+20)
                       .attr('y', topmargin+66+i*22)
                       .style('font-size', '16px')
-                      .style('fill', 'white');   
+                      .style('fill', '#34495e');   
                   })        
                 }           
               })
@@ -216,14 +206,14 @@
             .attr('x', cell_ht*4+20)
             .attr('y', topmargin+16)
             .style('font-size', '16px')
-            .style('fill', 'white');
+            .style('fill', '#34495e');
 
           vis.append("svg:text")
             .text('Hover over a cell to see what transitions are most likely.')
             .attr('x', cell_ht*4+20)
             .attr('y', topmargin+38)
             .style('font-size', '16px')
-            .style('fill', 'yellow');
+            .style('fill', 'orange');
 
           map.enter().append('svg:rect')
             .attr('class', 'cell')
@@ -247,21 +237,21 @@
             .attr('x', cell_ht*4+20)
             .attr('y', 4*cell_ht + topmargin + 40 + 16)
             .style('font-size', '16px')
-            .style('fill', 'white');
+            .style('fill', '#34495e');
 
           vis.append("svg:text")
             .text('we can reconstruct the most likely path.')
             .attr('x', cell_ht*4+20)
             .attr('y', 4*cell_ht + topmargin + 40 + 38)
             .style('font-size', '16px')
-            .style('fill', 'white');
+            .style('fill', '#34495e');
 
           vis.append("svg:text")
             .text('Click the circle to see the algorithm in action.')
             .attr('x', cell_ht*4+20)
             .attr('y', 4*cell_ht + topmargin + 40 + 60)
             .style('font-size', '16px')
-            .style('fill', 'yellow');
+            .style('fill', 'orange');
 
           robot.enter()
               .append("svg:circle")
@@ -300,7 +290,7 @@
   speech_group.append("svg:text")
               .text('Speech Recognition')
               .style('font-size','36px')
-              .style('fill', 'white')
+              .style('fill', '#34495e')
               .attr('y', 300)
               .style("fill-opacity", 1);
 
@@ -308,21 +298,21 @@
               .text('A well-known application of HMMs and the viterbi algorithm is speech recognition.')
               .style('font-size','18px')
               .attr('y', 350)
-              .style('fill', 'white')
+              .style('fill', '#34495e')
               .style("fill-opacity", 1);
 
   speech_group.append("svg:text")
               .text('If we observe the phones `n`,`iy`, and `t` we can use viterbi to determine the most likely word.')
               .style('font-size','18px')
               .attr('y', 374)
-              .style('fill', 'white')
+              .style('fill', '#34495e')
               .style("fill-opacity", 1);
 
   speech_group.append("svg:text")
               .text('Click each state to see the forward transitions probability calculations.')
               .style('font-size','18px')
               .attr('y', 398)
-              .style('fill', 'yellow')
+              .style('fill', 'orange')
               .style("fill-opacity", 1);
 
   speech_group.append("svg:text")
@@ -330,7 +320,7 @@
               .style('font-size','18px')
               .attr('y', 457)
               .attr('x', 99)
-              .style('fill', 'white')
+              .style('fill', '#34495e')
               .style("fill-opacity", 1);
 
   speech_group.append("svg:text")
@@ -338,7 +328,7 @@
               .style('font-size','18px')
               .attr('y', 457)
               .attr('x', 329)
-              .style('fill', 'white')
+              .style('fill', '#34495e')
               .style("fill-opacity", 1);
 
   speech_group.append("svg:text")
@@ -346,7 +336,7 @@
               .style('font-size','18px')
               .attr('y', 457)
               .attr('x', 517)
-              .style('fill', 'white')
+              .style('fill', '#34495e')
               .style("fill-opacity", 1);
 
   d3.json("/js/dict.json", function(json) {
@@ -389,20 +379,15 @@
 
     nodeEnter.append("svg:circle")
         .attr("r", 1e-6)
-        .style("fill", function(d) {
-          if (d.value == 0.0) {
-            return 'white'
-          } else {
-            return o(d.value)
-          };
-        });
+        .style("fill", function(d) { return o(d.value) });
 
     nodeEnter.append("svg:text")
         .attr("x", function(d) { return d.name == 'start' ? 10 : -10; })
         .attr("dy", ".35em")
+        .attr("y", "0.5em")
         .attr("text-anchor", function(d) { return d.name == 'start' ? "start" : "end" ; })
         .text(function(d) { return d.name; })
-        .style('fill', 'white')
+        .style('fill', '#34495e')
         .style("fill-opacity", 1e-6);
 
     // Transition nodes to their new position.
