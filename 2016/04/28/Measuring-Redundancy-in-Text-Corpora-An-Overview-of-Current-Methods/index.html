@@ -36,8 +36,8 @@
 <h2 id="In-conclusion-Overview-of-strategy-for-analysing-redundancy-in-Barcelona’s-Municipal-Gazette"><a href="#In-conclusion-Overview-of-strategy-for-analysing-redundancy-in-Barcelona’s-Municipal-Gazette" class="headerlink" title="In conclusion: Overview of strategy for analysing redundancy in Barcelona’s Municipal Gazette"></a>In conclusion: Overview of strategy for analysing redundancy in Barcelona’s Municipal Gazette</h2><h4 id="Evaluation-of-methods"><a href="#Evaluation-of-methods" class="headerlink" title="Evaluation of methods"></a>Evaluation of methods</h4><p>Due to the preliminary nature of these methods and research, evaluation will be limited to inspection of the researchers, e.g. “sanity” checks that document pairs classified as redundant are reasonable and comparative scoring between methods using the <a href="https://en.wikipedia.org/wiki/F1_score" target="_blank" rel="external">F-measure</a>.</p>
 <h4 id="Order-of-work"><a href="#Order-of-work" class="headerlink" title="Order of work"></a>Order of work</h4><ol>
 <li>Extract sentences as documents (later on replace sentences with ngrams, phrases, parapgraphs, or anuncios)</li>
-<li>Extract reasonable clusters of documents. These clusters will limit computation required in the following steps to evaluation of within-cluster pairs.</li>
 <li>Construct BOW and tf-idf document-term matrices</li>
+<li>Extract reasonable clusters of documents. These clusters will limit computation required in the following steps to evaluation of within-cluster pairs.</li>
 <li>Evaluate similarity between documents using BOW and tf-idf (e.g. edit-distance and cosine similarity of pair-wise columns).</li>
 <li>Compute the LSA word-similariy and repeat 3 weighting counts and tf-idf scores with their LSA similarity score.</li>
 <li>If WordNet is accessible for Catalan, repeat 4 using WordNet similarity.</li>
