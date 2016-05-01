@@ -38,9 +38,9 @@
 <li>Extract sentences as documents (later on replace sentences with ngrams, phrases, parapgraphs, or anuncios)</li>
 <li>Construct BOW and tf-idf document-term matrices</li>
 <li>Extract reasonable clusters of documents. These clusters will limit computation required in the following steps to evaluation of within-cluster pairs.</li>
-<li>Evaluate similarity between documents using BOW and tf-idf (e.g. edit-distance and cosine similarity of pair-wise columns).</li>
-<li>Compute the LSA word-similariy and repeat 3 weighting counts and tf-idf scores with their LSA similarity score.</li>
-<li>If WordNet is accessible for Catalan, repeat 4 using WordNet similarity.</li>
+<li>Evaluate similarity between documents using BOW and tf-idf (e.g. cosine similarity of pair-wise rows).</li>
+<li>Compute the LSA word-similarity and repeat step 4 weighting counts and tf-idf scores with their LSA similarity score.</li>
+<li>If WordNet is accessible for Catalan, repeat step 4 using WordNet similarity.</li>
 <li>Compute edit-distance</li>
 <li>Compute Smith-Waterman Alignment</li>
 <li>Advanced methods will be attempted in the following order: <a href="https://web.cs.dal.ca/~eem/cvWeb/pubs/2012-Aminul-CAI.pdf" target="_blank" rel="external">Google tri-gram</a>, <a href="http://www.mitpressjournals.org/doi/pdf/10.1162/089120105774321091" target="_blank" rel="external">Simfinder</a>, and <a href="http://www.aclweb.org/anthology/D11-1061.pdf" target="_blank" rel="external">WBOW + FOR</a></li>
