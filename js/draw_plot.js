@@ -52,6 +52,13 @@ var draw_plot = function(yrange, xrange, plot_type, data, group, dot_class, upda
             .attr("dy", ".71em")
             .style("text-anchor", "end")
             .text(plot_type == 'data' ? "x2" : 'Loss');
+
+        console.log()
+        group.append('text')
+            .attr('class', 'plot_title')
+            .attr("y", yrange[1] + 32)
+            .attr('x', xrange[1]/2 - 20)
+            .text(plot_type == 'data' ? (group.attr('id') == 'first_plot_group' ? 'Training Data' : 'Classifier') : 'Loss')
     }
     // add data points
     if (plot_type == 'data') {
