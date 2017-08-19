@@ -1,6 +1,6 @@
 # main text of home
 name: Aimee Barciauskas
-bio: A woman with a laptop
+bio: A woman who codes and climbs rocks.
 
 # twitter summary info
 description: 
@@ -14,7 +14,7 @@ picture: assets/images/aimee.png
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume-url: https://www.linkedin.com/in/abarciauskas/
 
 url: https://abarciauskas-bgse.github.io
 # your url: http://USERNAME.github.io
@@ -29,27 +29,27 @@ permalink: /:title/
 # analytics-piwik-id: 1
 
 # if you don't want comments in your posts, leave categories empty
-disqus:
-  shortname: mydisqus # enter this from your disqus account
-  categories: [blog, project] # only show disqus for posts that have these categories
+# disqus:
+#   shortname: mydisqus # enter this from your disqus account
+#   categories: [] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+# facebook: myfacebook
+twitter: _aimeeb
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
 # linkedin: mylinkedin
 # youtube: myyoutube
 # spotify: myspotify
-github: mygithub
+github: abarciauskas-bgse
 # lastfm: mylastfm
 # stackoverflow: 7044681/mystackoverflow
 # quora: userquora
 # reddit: username
-medium: medium
+medium: aimeeb
 # vimeo: myvimeo
-email: myemail@gmail.com
+email: barciaai@gmail.com
 
 authors:
     aimeebarciauskas:
