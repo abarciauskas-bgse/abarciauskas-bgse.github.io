@@ -1,7 +1,9 @@
 ---
-title: ":page_facing_up: Redundancy in Government Documents"
+title: ":page_facing_up: A Study of Redundancies"
 layout: post
 date: 2017-08-19 19:10
+image: /assets/images/histogram-nw-fomc.png
+headerImage: true
 tag:
 - data-science
 - nlp
@@ -14,7 +16,9 @@ author: aimeebarciauskas
 externalLink: false
 ---
 
-## The Project
+# The Project: A Study of Redundancies
+
+First, to clear up any ambiguity: this was a study of textual redundancies, not occupational ones.
 
 Government documents are hard to read. When government documents are made public, they are hardly ever crafted to make them easy for the public to digest.
 

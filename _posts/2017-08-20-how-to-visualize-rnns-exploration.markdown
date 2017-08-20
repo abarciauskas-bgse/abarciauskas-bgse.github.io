@@ -1,7 +1,9 @@
 ---
-title: ":art: Can we visualize neural networks? (Part 1: Exploration)"
+title: ":art: Visualizing neural networks (Part 1)"
 layout: post
 date: 2017-08-20 17:34
+image: /assets/images/neurons/output_iH6chi.gif
+headerImage: true
 tag:
 - data-science
 - deep-learning
@@ -13,6 +15,10 @@ category: project
 author: aimeebarciauskas
 externalLink: false
 ---
+
+# The Project: Visualizing neural networks
+
+## Part 1: Research and design
 
 The [Algorritmo](http://www.bsc.es/viz/algorritmo/) project seeks to answer the question "Can computers create art?" For my final master's project, I collaborated with the [Barecelona Supercomputing Center (BSC)](https://www.bsc.es/) on an exhibit featuring Algorritmo at Sónar, a 3-day electronic and advanced music festival. Algorritmo is a word-play on rhythim and algorithm, and thus translates to Algorhythm - clever, right?
 
