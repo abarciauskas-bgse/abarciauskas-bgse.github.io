@@ -20,7 +20,7 @@ At Nava, our work on the ACA and Medicare supports a mission to improve how gove
 
 If you heard anything about healthcare in the United States, you've likely heard about how expensive it is.
 
-One of the likely culprits of high costs is variation. I wanted to explore just _how_ variable costs are, and discovered some [cost data for end-stage renal disease (ESRD)](https://data.cms.gov/Special-Programs-Initiatives-Medicare-Shared-Savin/2015-County-level-Fee-for-Service-FFS-Data-for-Sha/njws-h2xd), also known as [kidney failure](https://en.wikipedia.org/wiki/Chronic_kidney_disease#Severity-based_stages). Using this data, I explored per capita ESRD costss by county and the correlation to [HCC risk scores](https://www.securityhealth.org/provider-manual/shared-content/claims-processing-policies-and-procedures/risk-adjustment---hcc-coding).
+One of the likely culprits of high costs is variation. I wanted to explore just _how_ variable costs are, and discovered some [cost data for end-stage renal disease (ESRD)](https://data.cms.gov/Special-Programs-Initiatives-Medicare-Shared-Savin/2015-County-level-Fee-for-Service-FFS-Data-for-Sha/njws-h2xd), also known as [kidney failure](https://en.wikipedia.org/wiki/Chronic_kidney_disease#Severity-based_stages). Using this data, I explored per capita ESRD costs by county and the correlation to [HCC risk scores](https://www.securityhealth.org/provider-manual/shared-content/claims-processing-policies-and-procedures/risk-adjustment---hcc-coding).
 
 Observations:
 
