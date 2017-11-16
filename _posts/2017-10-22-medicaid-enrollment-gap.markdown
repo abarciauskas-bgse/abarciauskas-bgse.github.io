@@ -228,14 +228,7 @@ From the [Kaiser Family Foundation](https://www.kff.org/health-reform/slide/curr
 
 # Data
 
-* Poverty at different levels of the FPL from kff.org
-  * [page](https://www.kff.org/other/state-indicator/distribution-by-fpl)
-  * From my wild google searching, I haven't found state-level data on percentage of the population at 133 or 138% of the FPL. So percentage of the population at 138% of the FPL has been interpolated from the percentage of the population living at 100%, 100-199% and 200-399% ([source code](https://github.com/abarciauskas-bgse/medicaid-enrollment-gap/blob/master/data/interpolate_138_fpl.py)).
-* Population data from census.gov
-  * [page](https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/state/asrh/)
-  * [csv file](https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/state/asrh/scprc-est2016-18+pop-res.csv)
-* Medicaid enrollment from medicaid.gov
-  * [page](https://www.medicaid.gov/medicaid/program-information/medicaid-and-chip-enrollment-data/enrollment-mbes/index.html)
-  * [pdf file](https://www.medicaid.gov/medicaid/program-information/downloads/cms-64-enrollment-report-jul-aug-2016.pdf) - copy / pasted data to create CSV
-  * data not available for South Dakota
+* Poverty at different levels of the FPL from kff.org: [web page](https://www.kff.org/other/state-indicator/distribution-by-fpl). From my wild google searching, I haven't found state-level data on percentage of the population at 133 or 138% of the FPL. So percentage of the population at 138% of the FPL has been interpolated from the percentage of the population living at 100%, 100-199% and 200-399% ([source code](https://github.com/abarciauskas-bgse/medicaid-enrollment-gap/blob/master/data/interpolate_138_fpl.py)).
+* Population data from census.gov: [web page](https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/state/asrh/), [csv file](https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/state/asrh/scprc-est2016-18+pop-res.csv)
+* Medicaid enrollment from medicaid.gov: [web page](https://www.medicaid.gov/medicaid/program-information/medicaid-and-chip-enrollment-data/enrollment-mbes/index.html), [pdf file](https://www.medicaid.gov/medicaid/program-information/downloads/cms-64-enrollment-report-jul-aug-2016.pdf). PDF data was copy / pasted to create CSV. Data not available for South Dakota.
 
