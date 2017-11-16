@@ -20,21 +20,32 @@ At Nava we've started working on a cool idea: [integrated benefits](https://www.
 
 Many of the social services are administered at the state level. How do we prioritize where to develop integrated services?
 
-One simplistic approach I'm trying is to see where there is the greatest need - where are there many people who are missing out on these services?
+One simplistic approach I'm trying is quantifying where there is the greatest need: where are there the greatest numbers missing out on these services?
 
-Using Medicaid, poverty and population data from census.gov and medicaid.gov, we can estimate a "Medicaid enrollment gap": The difference between the percent of population enrolled in Medicaid and the percent living below the poverty line.
+Using poverty, population and medicaid data, I estimated a "Medicaid enrollment gap": The difference between the percentage of the population enrolled in Medicaid and the percentage of the population eligible for Medicaid under the ACA.
 
-One thing I was surprised to find was for most states, this "gap" is positive: more individuals are enrolled in Medicaid than are living under the poverty line. However, this shouldn't have been surprising. Each state is given freedom to enforce it's own Medicaid eligibility rules.
+The ACA was designed to expand Medicaid. The [ACA included a provision on Medicaid which was intended to be uniform across states](https://en.wikipedia.org/wiki/Medicaid): everyone with income below 133% of the federal poverty line (FPL) would be considered eligible for Medicaid. 
 
-The [ACA included one provision on Medicaid which was intended to be uniform across states](https://en.wikipedia.org/wiki/Medicaid): everyone with income below 133% of the poverty line is eligible for Medicaid. However this provision of the ACA was overruled in the Supreme Court:
+_Sidebar: If you work in government, you'll find policies can be a treasure trove of gotchas. The [Wikipedia page for Medicaid](https://en.wikipedia.org/wiki/Medicaid) states the new Medicaid eligibility threshold as 133%, however [other sources](https://www.kff.org/medicaid/fact-sheet/where-are-states-today-medicaid-and-chip/) state the new threshold is 138%. Both are correct! The ACA also detailed a new way to calculate income level that made the nominal rate of 133% effectively 138%._
+
+One thing I was surprised to find was for most states, the "gap" is positive: more individuals are enrolled in Medicaid than are living under the new income eligibility threshold. This is easily explained: Each state is given freedom to enforce it's own Medicaid eligibility rules, so some states have implemented even _higher_ eligibility thresholds.
+
+Yet a few states are still significantly underolled. Note Virginia and North Carolina in the map below.
+
+It turns out, the provision for the new threshold in the ACA was overruled in the Supreme Court:
 
 > However, the Supreme Court ruled in NFIB v. Sebelius that this provision of the ACA was coercive, and that the federal government must allow states to continue at pre-ACA levels of funding and eligibility if they chose.
 
-So while most states have more Medicaid enrollees than population living under the poverty line, a few states do not, and those states really appear as outliers. And you can really see that those states with smaller or negative gaps between Medicaid enrollees and population in poverty correspond to those states who have chosen not to expand Medicaid under the ACA.
+So, while most states have more Medicaid enrollees than population living under the poverty line, a few states do not. And those states really appear as outliers. In the plots below you see those states with small and negative Medicaid enrollment gaps (as determined by the original ACA) clearly match those states who have chosen not to expand Medicaid under the ACA.
 
-## Difference between Medicaid Enrollment and Population in Poverty
+## Difference between Medicaid Enrollment and Medicaid-Eligible
 
-The difference between the percent of population enrolled in Medicaid and the percent living below the poverty line.
+Medicaid Enrollment population has been calculated using medicaid enrollment and population data from each state from medicaid.gov and census.gov, respectively.
+
+The Medicaid-Eligible population has been estimated using the percentage of the population at different income levels.
+
+See the **Data** section at the bottom of this post for more detail on and links to data sources.
+
 <style>
 
 /* stylesheet for your custom graph */
@@ -217,9 +228,9 @@ From the [Kaiser Family Foundation](https://www.kff.org/health-reform/slide/curr
 
 # Data
 
-* Poverty data from census.gov
-  * [page](https://www.census.gov/data/tables/2017/demo/income-poverty/p60-259.html)
-  * [xls file](https://www2.census.gov/programs-surveys/demo/tables/p60/259/statepov.xls)
+* Poverty at different levels of the FPL from kff.org
+  * [page](https://www.kff.org/other/state-indicator/distribution-by-fpl)
+  * From my wild google searching, I haven't found state-level data on percentage of the population at 133 or 138% of the FPL. So percentage of the population at 138% of the FPL has been interpolated from the percentage of the population living at 100%, 100-199% and 200-399% ([source code](https://github.com/abarciauskas-bgse/medicaid-enrollment-gap/blob/master/data/interpolate_138_fpl.py)).
 * Population data from census.gov
   * [page](https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/state/asrh/)
   * [csv file](https://www2.census.gov/programs-surveys/popest/datasets/2010-2016/state/asrh/scprc-est2016-18+pop-res.csv)
