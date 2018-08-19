@@ -1,5 +1,5 @@
 ---
-title: ":women_climbing: Has Japan always been dominant in competitive bouldering?"
+title: ":mount_fuji: Has Japan always been dominant in competitive bouldering?"
 layout: post
 date: 2018-08-19 15:02
 image: 
@@ -23,7 +23,7 @@ I wanted to know if this single-nation dominance was a new phenomenom. I "gather
 
 Of course, space in the semifinals is limited. The number of French competitors :france: making the semifinals during the same period has declined from 75 in 2007 to 23 in 2017.
 
-![Semifinal Athletes by Year](semifinal-athletes-by-year.png)
+![Semifinal Athletes by Year](/assets/images/semifinal-athletes-by-year.png)
 
 The countries listed above are the most represented 10 countries in IFSC bouldering semifinals the from 2007-2017. 79.5% of bouldering semifinalists are from these 10 countries.
 
