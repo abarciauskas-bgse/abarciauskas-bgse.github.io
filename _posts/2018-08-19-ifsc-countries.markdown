@@ -15,11 +15,11 @@ author: aimeebarciauskas
 externalLink: false
 ---
 
-When not climbing or computing, I enjoy watching [IFSC (International Federation of Sports Climbing)](http://www.ifsc-climbing.org/) World Cup Competitions.
+I love climbing and coding - but sometimes I take breaks. During breaks, I enjoy watching [IFSC (International Federation of Sports Climbing)](http://www.ifsc-climbing.org/) World Cup Competitions.
 
-These days, the Japanese team dominates IFSC bouldering competitions. It is not uncommon for half the bouldering field to be Japanese. 
+These days, Japan is dominating IFSC bouldering competitions. It is common for half the bouldering field to be Japanese.
 
-I wanted to know if this single-nation dominance was a new phenomenom. I "gathered" some data from the IFSC website and found 12 Japanese competitors made the semifinals in 2007, compared with 69 in 2017.
+I wanted to know if this dominance was new so I "gathered" some data from the IFSC website. I found Japan's dominance is new: there were **12 Japanese competitors in the semifinals in 2007, compared with 69 in 2017**.
 
 Of course, space in the semifinals is limited. The number of French competitors making the semifinals during the same period has declined from 75 in 2007 to 23 in 2017.
 
