@@ -2,3 +2,5 @@ _site
 .sass-cache
 .jekyll-metadata
 jupyter/.ipynb_checkpoints
+.bundle/
+vendor/
