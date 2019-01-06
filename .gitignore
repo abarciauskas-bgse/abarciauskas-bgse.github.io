@@ -4,3 +4,4 @@ _site
 jupyter/.ipynb_checkpoints
 .bundle/
 vendor/
+testing/

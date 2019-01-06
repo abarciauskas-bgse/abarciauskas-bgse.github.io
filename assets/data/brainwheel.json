@@ -1,0 +1,241 @@
+[
+  {
+    "name": "Do Good",
+    "key": "dogood",
+    "nodeType": "goal",
+    "pages": [
+      {
+        "name": "Work on Capital Nature",
+        "key": "63df3354-0f9e-49c9-b832-01ec7c2d779c"
+      },
+      {
+        "name": "Be a DataKind DC Chapter Leader",
+        "key": "b66782d5-2940-45e4-888f-a8dfbfbf6a32"
+      },
+      {
+        "name": "Create Visualization using Health Care Cost Institute Data",
+        "key": "4194a041-6244-4824-a0f2-bad719006ee9"        
+      }   
+    ]
+  },
+  {
+    "name": "Learn New Things",
+    "key": "learnnewthings",
+    "nodeType": "goal",
+    "pages": [
+      {
+        "name": "Work on Coursera Course 'Imagery, Automation, and Applications'",
+        "key": "ce2a47da-042e-41a9-8678-f6213e2cbcda",
+        "linkNodeType": "external",
+        "url": "https://www.coursera.org/learn/gis-applications",
+        "nodeType": "action"
+      },
+      {
+        "name": "Watch Vox's Explained",
+        "key": "9f4a21f7-db8e-41a2-b884-d2f8ef7b907c",
+        "linkNodeType": "external",
+        "url": "https://www.netflix.com/title/80216752",
+        "nodeType": "action"
+      },
+      {
+        "name": "Watch Dirty Money",
+        "key": "6e26607c-08b6-4f78-9018-f676e70ee0ad",
+        "linkNodeType": "external",
+        "url": "https://www.netflix.com/title/80118100",
+        "nodeType": "action"
+      },
+      {
+        "name": "Take d3.js Udacity Course",
+        "key": "cdb740af-a1ff-40da-bf18-f47f29e9c9a8",
+        "linkNodeType": "external",
+        "url": "https://eu.udacity.com/course/data-visualization-and-d3js--ud507",
+        "nodeType": "action"
+      },
+      {
+        "name": "Create a Simple Satellite Data Pipeline Design for Testing Frameworks",
+        "key": "54eb4607-00d5-42ac-9362-27c904453c6a"
+      }  
+    ]
+  },
+  {
+    "name": "Be Happy & Healthy",
+    "key": "behappy",
+    "nodeType": "goal",
+    "pages": [
+      {
+        "name": "Listen to Without Fail",
+        "key": "303434109958137808"
+      },
+      {
+        "name": "Go Running",
+        "key": "02d151f0-0484-4062-aeea-aca40ba4f734",
+        "nodeType": "action"
+      },
+      {
+        "name": "Go to Yoga",
+        "key": "4aeea69e-d76c-4b82-972d-b931387133f2",
+        "nodeType": "action"
+      },
+      {
+        "name": "Go Climbing",
+        "key": "31269399-b24b-4f07-a094-7dea1b7779d1",
+        "nodeType": "action"
+      }
+    ]
+  },
+  {
+    "name": "Be Passionate",
+    "key": "bepassionate",
+    "nodeType": "goal",
+    "pages": [
+      {
+        "key": "9076157104544212088",
+        "name": "Create 'How Computer Vision Works' Visualization"
+      }
+    ]
+  },
+  {
+    "name": "Internet of Things",
+    "key": "iot",
+    "nodeType": "theme",
+    "pages": [
+      {
+        "name": "Your Apps Know Where You Were Last Night",
+        "key": "8274971709723588104",
+        "nodeType": "reference"
+      }
+    ]
+  },
+  {
+    "name": "Satellite Imagery",
+    "key": "satelliteimagery",
+    "nodeType": "theme",
+    "pages": [
+      {
+        "name": "Create a Simple Satellite Data Pipeline Design for Testing Frameworks",
+        "key": "54eb4607-00d5-42ac-9362-27c904453c6a"
+      },
+      {
+        "name": "Work on Coursera Course 'Imagery, Automation, and Applications'",
+        "key": "ce2a47da-042e-41a9-8678-f6213e2cbcda"        
+      },
+      {
+        "name": "Create 'How Remote Sensing Works' Visualization",
+        "key": "e2f8eef7-00e5-47e9-83b6-36431908566d"
+      }      
+    ]
+  },  
+  {
+    "name": "Leadership",
+    "key": "leadership",
+    "nodeType": "theme",
+    "pages": [
+      {
+        "name": "Listen to Without Fail",
+        "key": "303434109958137808"
+      },
+      {
+        "name": "Be a DataKind DC Chapter Leader",
+        "key": "b66782d5-2940-45e4-888f-a8dfbfbf6a32"
+      }
+    ]
+  },
+  {
+    "name": "Entertainment",
+    "key": "entertainment",
+    "nodeType": "theme",
+    "pages": [
+      {
+        "name": "Listen to Without Fail",
+        "key": "303434109958137808"
+      },
+      {
+        "name": "Watch Vox's Explained",
+        "key": "9f4a21f7-db8e-41a2-b884-d2f8ef7b907c"        
+      },
+      {
+        "name": "Watch Dirty Money",
+        "key": "6e26607c-08b6-4f78-9018-f676e70ee0ad"        
+      }           
+    ]
+  },
+  {
+    "name": "Machine Learning",
+    "key": "machine-learning",
+    "nodeType": "theme",
+    "pages": [
+      {
+        "name": "Create 'How Computer Vision Works' Visualization",
+        "key": "9076157104544212088"
+      }
+    ]
+  },
+  {
+    "name": "Visualization",
+    "key": "visualization",
+    "nodeType": "theme",
+    "pages": [
+      {
+        "name": "Create 'How Computer Vision Works' Visualization",
+        "key": "9076157104544212088"
+      },
+      {
+        "name": "Create 'How Remote Sensing Works' Visualization",
+        "key": "e2f8eef7-00e5-47e9-83b6-36431908566d"
+      },
+      {
+        "name": "Take d3.js Udacity Course",
+        "key": "cdb740af-a1ff-40da-bf18-f47f29e9c9a8"        
+      },
+      {
+        "name": "Create Visualization using Health Care Cost Institute Data",
+        "key": "4194a041-6244-4824-a0f2-bad719006ee9",
+        "linkNodeType": "external",
+        "url": "https://www.healthcostinstitute.org/data",
+        "nodeType": "action"
+      }    
+    ]
+  },
+  {
+    "name": "Be Creative",
+    "key": "becreative",
+    "nodeType": "goal",
+    "pages": [
+      {
+        "name": "Create 'How Computer Vision Works' Visualization",
+        "key": "9076157104544212088"
+      },
+      {
+        "name": "Create 'How Remote Sensing Works' Visualization",
+        "key": "e2f8eef7-00e5-47e9-83b6-36431908566d",
+        "url": null,
+        "nodeType": "action"
+      },
+      {
+        "name": "Create Visualization using Health Care Cost Institute Data",
+        "key": "4194a041-6244-4824-a0f2-bad719006ee9"        
+      }      
+    ]
+  },
+  {
+    "name": "Be Inspired",
+    "key": "beinspired",
+    "nodeType": "goal",
+    "pages": [
+      {
+        "name": "Your Apps Know Where You Were Last Night",
+        "key": "8274971709723588104",
+        "linkNodeType": "external",
+        "url": "https://www.nytimes.com/interactive/2018/12/10/business/location-data-privacy-apps.html",
+        "nodeType": "reference"
+      },
+      {
+        "name": "Listen to Without Fail",
+        "key": "303434109958137808",
+        "linkNodeType": "external",
+        "url": "https://www.gimletmedia.com/without-fail",
+        "nodeType": "action"
+      }
+    ]
+  }
+]
