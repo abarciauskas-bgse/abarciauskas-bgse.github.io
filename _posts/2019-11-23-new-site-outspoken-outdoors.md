@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "I have a second domain!"
+projects: false
+category: blog
 ---
 
 # outspokenoutdoors.com
